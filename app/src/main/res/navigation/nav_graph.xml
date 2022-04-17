@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/list_post">
+
+    <fragment
+        android:id="@+id/list_employee"
+        android:name="com.test.homework11.Fragments.EmployeeFragment"
+        android:label="EmployeeFragment"
+        tools:layout="@layout/employee_list">
+    </fragment>
+
+    <fragment
+        android:id="@+id/list_post"
+        android:name="com.test.homework11.Fragments.PostFragment"
+        android:label="PostFragment"
+        tools:layout="@layout/post_list">
+        <action
+            android:id="@+id/action_listPost_to_listEmployee"
+            app:destination="@id/list_employee" />
+    </fragment>
+</navigation>
